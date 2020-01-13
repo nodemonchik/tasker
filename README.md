@@ -1,5 +1,9 @@
 # Tasker
 
+[![Build Status](https://travis-ci.com/nodemonchik/tasker.svg?branch=master)](https://travis-ci.com/nodemonchik/tasker)
+[![Maintainability](https://api.codeclimate.com/v1/badges/177698980d9abdeea46b/maintainability)](https://codeclimate.com/github/nodemonchik/tasker/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/177698980d9abdeea46b/test_coverage)](https://codeclimate.com/github/nodemonchik/tasker/test_coverage)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
