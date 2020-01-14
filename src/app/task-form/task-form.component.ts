@@ -1,5 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Task } from '../app.component';
+import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-task-form',
@@ -8,24 +8,17 @@ import { Task } from '../app.component';
 })
 export class TaskFormComponent implements OnInit {
 
-  @Output() onAdd: EventEmitter<Task> = new EventEmitter();
-
-  title = '';
-  description = '';
-
-  constructor() { }
+  form: FormGroup;
 
   ngOnInit() {
+    this.form = new FormGroup({
+      title: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      description: new FormControl('', [Validators.required, Validators.minLength(10)])
+    });
   }
 
-  addTask() {
-    const task: Task = {
-      title: this.title,
-      description: this.description
-    };
-    this.onAdd.emit(task);
-
-    this.title = this.description = '';
+  submit() {
+    console.log('submited', this.form.value);
   }
 
 }

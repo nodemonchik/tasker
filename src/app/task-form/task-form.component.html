@@ -1,18 +1,11 @@
-<section class="task-form">
-  <input
-    class="task-form__input"
-    type="text"
-    placeholder="Введите задачу..."
-    [(ngModel)]="title"
-  >
-  <input
-    class="task-form__input"
-    type="text"
-    placeholder="Введите задачу..."
-    [(ngModel)]="description"
-  >
-  <button
-    class="task-form__btn"
-    (click)="addTask()"
-  >Добавить</button>
-</section>
+<div class="wrapper">
+  <form class="task-form" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="task-form__item">
+      <input type="text" placeholder="Введите название..." formControlName="title">
+    </div>
+    <div class="task-form__item">
+      <textarea name="description" placeholder="Введите текст..." formControlName="description"></textarea>
+    </div>
+    <button class="task-form__btn" type="submit" [disabled]="form.invalid">Добавить</button>
+  </form>
+<div>

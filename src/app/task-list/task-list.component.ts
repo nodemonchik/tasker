@@ -19,9 +19,4 @@ export class TaskListComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateTasks(task: Task) {
-    console.log(task);
-    this.tasks.unshift(task);
-  }
-
 }

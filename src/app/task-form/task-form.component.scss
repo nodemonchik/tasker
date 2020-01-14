@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.task-form__input {
+.task-form__item input {
   width: 300px;
   height: 32px;
   margin-bottom: 10px;
@@ -19,6 +19,40 @@
   &:focus {
     border: 2px solid tomato;
   }
+
+  &.ng-invalid.ng-touched {
+    border: 2px solid red;
+  }
+
+  &.ng-valid.ng-touched {
+    border: 2px solid green;
+  }
+}
+
+.task-form__item textarea {
+  width: 300px;
+  min-height: 100px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #ccc;
+
+  &:hover {
+    border: 2px solid rgba($color: #ccc, $alpha: 0.6)
+  }
+
+  &:focus {
+    border: 2px solid tomato;
+  }
+
+  &.ng-invalid.ng-touched {
+    border: 2px solid red;
+  }
+
+  &.ng-valid.ng-touched {
+    border: 2px solid green;
+  }
 }
 
 .task-form__btn {
@@ -32,4 +66,9 @@
   border: transparent;
   border-radius: 5px;
   cursor: pointer;
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: auto;
+  }
 }

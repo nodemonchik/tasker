@@ -1,12 +1,8 @@
 <p>task-list works!</p>
-<app-task-form
-  (onAdd)="updateTasks($event)"
-></app-task-form
-  >
-<ul (onAdd)="updateTasks($event)">
+
+<ul>
   <app-task
     *ngFor="let t of tasks"
     [task]="t"
   ></app-task>
-</ul
->
+</ul>
