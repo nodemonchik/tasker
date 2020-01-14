@@ -1,0 +1,35 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-form__input {
+  width: 300px;
+  height: 32px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+
+  &:hover {
+    border: 2px solid rgba($color: #ccc, $alpha: 0.6)
+  }
+
+  &:focus {
+    border: 2px solid tomato;
+  }
+}
+
+.task-form__btn {
+  width: 80px;
+  height: 35px;
+  padding: 5px;
+  outline: none;
+  background-color: green;
+  color: #fff;
+  font-size: 14px;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}

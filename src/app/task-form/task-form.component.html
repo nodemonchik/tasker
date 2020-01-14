@@ -1,1 +1,18 @@
-<p>task-form works!</p>
+<section class="task-form">
+  <input
+    class="task-form__input"
+    type="text"
+    placeholder="Введите задачу..."
+    [(ngModel)]="title"
+  >
+  <input
+    class="task-form__input"
+    type="text"
+    placeholder="Введите задачу..."
+    [(ngModel)]="description"
+  >
+  <button
+    class="task-form__btn"
+    (click)="addTask()"
+  >Добавить</button>
+</section>
