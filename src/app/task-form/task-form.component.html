@@ -18,7 +18,7 @@
     <div class="task-form__item">
       <textarea name="description" placeholder="Введите текст..." formControlName="description"></textarea>
       <div
-        *ngIf="form.get('title').invalid && form.get('title').touched"
+        *ngIf="form.get('description').invalid && form.get('description').touched"
         class="errors"
       >
         <small *ngIf="form.get('desctiption').errors.minlength">
