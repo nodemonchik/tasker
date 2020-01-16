@@ -19,6 +19,7 @@ export class TaskFormComponent implements OnInit {
 
   submit() {
     console.log('submited', this.form.value);
+    this.form.reset();
   }
 
 }
