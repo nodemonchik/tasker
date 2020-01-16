@@ -2,9 +2,29 @@
   <form class="task-form" [formGroup]="form" (ngSubmit)="submit()">
     <div class="task-form__item">
       <input type="text" placeholder="Введите название..." formControlName="title">
+      <div
+        *ngIf="form.get('title').invalid && form.get('title').touched"
+        class="errors"
+      >
+        <small *ngIf="form.get('title').errors.required">
+          Поле Название, не должно быть пустым
+        </small>
+
+        <small *ngIf="form.get('title').errors.minlength">
+          Длинна заголовка должна быть не менее {{ form.get('title').errors.minlength.requiredLength }} символов
+        </small>
+      </div>
     </div>
     <div class="task-form__item">
       <textarea name="description" placeholder="Введите текст..." formControlName="description"></textarea>
+      <div
+        *ngIf="form.get('title').invalid && form.get('title').touched"
+        class="errors"
+      >
+        <small *ngIf="form.get('desctiption').errors.minlength">
+          Длинна текста должна быть не менее {{ form.get('description').errors.minlength.requiredLength }} символов
+        </small>
+      </div>
     </div>
     <button class="task-form__btn" type="submit" [disabled]="form.invalid">Добавить</button>
   </form>

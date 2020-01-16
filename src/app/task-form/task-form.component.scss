@@ -6,7 +6,6 @@
 .task-form__item input {
   width: 300px;
   height: 32px;
-  margin-bottom: 10px;
   padding: 4px;
   border: 2px solid #ccc;
   border-radius: 5px;
@@ -32,6 +31,7 @@
 .task-form__item textarea {
   width: 300px;
   min-height: 100px;
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 4px;
   border-radius: 5px;
@@ -53,6 +53,11 @@
   &.ng-valid.ng-touched {
     border: 2px solid green;
   }
+}
+
+small {
+  font-size: 12px;
+  color: red;
 }
 
 .task-form__btn {
