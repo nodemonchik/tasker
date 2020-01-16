@@ -8,11 +8,7 @@ import { Task } from '../app.component';
 })
 export class TaskListComponent implements OnInit {
 
-  tasks: Task[] = [
-    {id: 1, title: 'task1', description: 'any text'},
-    {id: 2, title: 'task2', description: 'any text'},
-    {id: 3, title: 'task3', description: 'any text'}
-  ];
+  tasks: Task[] = [];
 
   constructor() { }
 
