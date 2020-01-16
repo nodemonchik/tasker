@@ -21,7 +21,10 @@
         *ngIf="form.get('description').invalid && form.get('description').touched"
         class="errors"
       >
-        <small *ngIf="form.get('desctiption').errors.minlength">
+        <small *ngIf="form.get('description').errors.required">
+          Поле Описание, не должно быть пустым
+        </small>
+        <small *ngIf="form.get('description').errors.minlength">
           Длинна текста должна быть не менее {{ form.get('description').errors.minlength.requiredLength }} символов
         </small>
       </div>
